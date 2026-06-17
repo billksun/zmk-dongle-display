@@ -202,3 +202,35 @@ const lv_img_dsc_t opt_icon = {
   .data = opt_map,
 };
 
+#ifndef LV_ATTRIBUTE_IMG_NIX
+#define LV_ATTRIBUTE_IMG_NIX
+#endif
+
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_NIX uint8_t nix_map[] = {
+  0xff, 0xff, 0xff, 0xff, 	/*Color of index 0*/
+  0x00, 0x00, 0x00, 0xff, 	/*Color of index 1*/
+
+  0xc3, 0x0c, 	// ##    ##    ##
+  0xe3, 0x1c, 	// ###   ##   ###
+  0x73, 0x38, 	//  ###  ##  ###
+  0x3b, 0x70, 	//   ### ## ###
+  0x1f, 0xe0, 	//    ########
+  0x0f, 0xc0, 	//     ######
+  0x07, 0x80, 	//      ####
+  0x07, 0x80, 	//      ####
+  0x0f, 0xc0, 	//     ######
+  0x1f, 0xe0, 	//    ########
+  0x3b, 0x70, 	//   ### ## ###
+  0x73, 0x38, 	//  ###  ##  ###
+  0xe3, 0x1c, 	// ###   ##   ###
+  0xc3, 0x0c, 	// ##    ##    ##
+};
+
+const lv_img_dsc_t nix_icon = {
+  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.w = 14,
+  .header.h = 14,
+  .data_size = 36,
+  .data = nix_map,
+};
+
